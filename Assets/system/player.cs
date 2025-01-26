@@ -5,7 +5,7 @@ using UnityEngine;
 public class player : MonoBehaviour
 {
     public GameObject aimCircle;
-
+    public Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,12 +19,14 @@ public class player : MonoBehaviour
     }
 
     void CastingPointMove()
-    {
-        if (Input.GetAxis("Horizontal") == 1f || Input.GetAxis("Horizontal") == -1f) ;
-        {
-            Debug.Log("Horizontal" + Input.GetAxis("Horizontal"));
-            aimCircle.transform.position += new Vector3(Input.GetAxis("Horizontal") * 8 * Time.deltaTime, 0f, 0f);
-        }
+    {   
+        Debug.Log("Vertical" + Input.GetAxis("Vertical"));
+        float move_x = Input.GetAxis("Horizontal");
+        rb.velocity = new Vector3(move_x * 8, Input.GetAxis("Vertical") * 8, 0f);
+
+        Debug.Log("Horizontal" + Input.GetAxis("Horizontal"));
+        //rb.velocity = new Vector3(Input.GetAxis("Horizontal") * 8, 0f, 0f);
+
     }
 
 }

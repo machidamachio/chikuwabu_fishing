@@ -28,14 +28,17 @@ public class player : MonoBehaviour
         float move_x = Input.GetAxis("Horizontal");
         rb.velocity = new Vector3(move_x * 8, Input.GetAxis("Vertical") * 8, 0f);
         //rb.velocity = new Vector3(Input.GetAxis("Horizontal") * 8, 0f, 0f);
-
+        if (Isplay == false)
+        {
+            return;
+        }
     }
 
     void Isplaying()
     {
 
 
-        if (Isplay = true) ;
+        if (Isplay == true) ;
         {
             CastingPointMove();
 
@@ -49,7 +52,7 @@ public class player : MonoBehaviour
 
     void Ispointing()
     {
-         if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("space"))
         {
             Debug.Log("space key was pressed");
             Ispoint = true;

@@ -6,27 +6,56 @@ public class player : MonoBehaviour
 {
     public GameObject aimCircle;
     public Rigidbody2D rb;
+    public bool Isplay;
+    public bool Ispoint;
     // Start is called before the first frame update
     void Start()
     {
         aimCircle.transform.position = new Vector3(0, -2, -1);
+        Isplay = true;
+        Ispoint = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        CastingPointMove();
+        Isplaying();
+        Ispointing();
     }
 
     void CastingPointMove()
-    {   
-        Debug.Log("Vertical" + Input.GetAxis("Vertical"));
+    {
         float move_x = Input.GetAxis("Horizontal");
         rb.velocity = new Vector3(move_x * 8, Input.GetAxis("Vertical") * 8, 0f);
-
-        Debug.Log("Horizontal" + Input.GetAxis("Horizontal"));
         //rb.velocity = new Vector3(Input.GetAxis("Horizontal") * 8, 0f, 0f);
 
+    }
+
+    void Isplaying()
+    {
+
+
+        if (Isplay = true) ;
+        {
+            CastingPointMove();
+
+        }
+
+        // else(Isplay = true);
+        // {
+
+        // }
+    }
+
+    void Ispointing()
+    {
+         if (Input.GetKeyDown("space"))
+        {
+            Debug.Log("space key was pressed");
+            Ispoint = true;
+            Isplay = false;
+        }
+        Debug.Log("Ispointing is working");
     }
 
 }

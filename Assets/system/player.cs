@@ -19,46 +19,33 @@ public class player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Isplaying();
         Ispointing();
+        if (Isplay == true)
+        {
+            // Debug.Log("ここ");
+            CastingPointMove();
+        }
     }
 
     void CastingPointMove()
     {
         float move_x = Input.GetAxis("Horizontal");
         rb.velocity = new Vector3(move_x * 8, Input.GetAxis("Vertical") * 8, 0f);
-        //rb.velocity = new Vector3(Input.GetAxis("Horizontal") * 8, 0f, 0f);
         if (Isplay == false)
         {
             return;
         }
     }
 
-    void Isplaying()
-    {
-
-
-        if (Isplay == true) ;
-        {
-            CastingPointMove();
-
-        }
-
-        // else(Isplay = true);
-        // {
-
-        // }
-    }
-
     void Ispointing()
     {
         if (Input.GetKeyDown("space"))
         {
-            Debug.Log("space key was pressed");
+            // Debug.Log("space key was pressed");
             Ispoint = true;
             Isplay = false;
         }
-        Debug.Log("Ispointing is working");
+        // Debug.Log("Ispointing is working");
     }
 
 }

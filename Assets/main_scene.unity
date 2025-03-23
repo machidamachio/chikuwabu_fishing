@@ -273,7 +273,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 36790323}
-  - component: {fileID: 36790322}
+  - component: {fileID: 36790324}
   m_Layer: 0
   m_Name: FishManager
   m_TagString: Untagged
@@ -281,20 +281,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &36790322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 36790321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92fc37067873f42fd82a74d8e1d5ca22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fishShadow: {fileID: 4505553147993275607, guid: 37254fbd57b9942d2978cd53b034c790, type: 3}
-  p1: {fileID: 265151218}
 --- !u!4 &36790323
 Transform:
   m_ObjectHideFlags: 0
@@ -310,6 +296,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &36790324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36790321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd9d958f550fe456a99e07a6ab88f00a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishShadow: {fileID: 4505553147993275607, guid: 37254fbd57b9942d2978cd53b034c790, type: 3}
 --- !u!4 &37444990 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8177693151509331202, guid: 31907c51ab8084083892ab5126579a73, type: 3}
@@ -2178,7 +2177,6 @@ GameObject:
   - component: {fileID: 631676689}
   - component: {fileID: 631676688}
   - component: {fileID: 631676691}
-  - component: {fileID: 631676692}
   m_Layer: 0
   m_Name: wall
   m_TagString: Fish_spawn
@@ -2296,19 +2294,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.99999994}
   m_EdgeRadius: 0
---- !u!114 &631676692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 631676686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd9d958f550fe456a99e07a6ab88f00a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fishShadow: {fileID: 20679140}
 --- !u!4 &631904541 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8177693151509331202, guid: 31907c51ab8084083892ab5126579a73, type: 3}
@@ -2849,6 +2834,10 @@ PrefabInstance:
     - target: {fileID: 4505553147993275607, guid: 37254fbd57b9942d2978cd53b034c790, type: 3}
       propertyPath: m_Name
       value: gyoei
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505553147993275607, guid: 37254fbd57b9942d2978cd53b034c790, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6012238087535908394, guid: 37254fbd57b9942d2978cd53b034c790, type: 3}
       propertyPath: m_RootOrder
@@ -4069,6 +4058,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1774286584181194511, guid: 700d073f6417c43d8929807c881cd479, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7079442610605963275, guid: 700d073f6417c43d8929807c881cd479, type: 3}
+      propertyPath: Ispoint
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

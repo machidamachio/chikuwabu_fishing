@@ -45,6 +45,13 @@ public class player : MonoBehaviour
             Ispoint = true;
             Isplay = false;
         }
+
+        if (Input.GetKeyDown("return") && Ispoint == true)
+        {   
+            Ispoint = false;
+            Isplay = true;
+
+        }
         // Debug.Log("Ispointing is working");
     }
 

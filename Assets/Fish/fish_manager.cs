@@ -16,31 +16,31 @@ public class fish_manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(p1.Isplay == true)
-        {
-            FishSwimming();
-        }
+        // if(p1.Isplay == true)
+        // {
+        //     FishSwimming();
+        // }
 
 
     }
 
-    void FishSwimming()
-    {
-        // Debug.Log("ϵ( 'Θ' )϶");
+    // void FishSwimming()
+    // {
+    //     // Debug.Log("ϵ( 'Θ' )϶");
         
-        transform.Translate(-0.02f,0f,0f);
-    }
+    //     fishShadow.transform.Translate(-0.02f,0f,0f);
+    // }
 
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        Debug.Log("当たった物体" + col.gameObject.name);
-        if(col.gameObject.tag == "Death_wall")
-        {
-             Destroy(gameObject);
+    // void OnTriggerEnter2D(Collider2D col)
+    // {
+    //     Debug.Log("当たった物体" + col.gameObject.name);
+    //     if(col.gameObject.tag == "Death_wall")
+    //     {
+    //          Destroy(gameObject);
 
-             Debug.Log("当たったンゴ");
-        }
-    }
+    //          Debug.Log("当たったンゴ");
+    //     }
+    // }
 
 }
  

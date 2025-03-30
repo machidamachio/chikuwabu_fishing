@@ -50,7 +50,13 @@ public class Fish : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, aimCircle.transform.position, speed * Time.deltaTime);
 
-            transform.LookAt(aimCircle.transform.position,Vector3.up);
+            //transform.LookAt(aimCircle.transform.position,Vector3.up);
+
+            Vector3 diff = (aimCircle.gameObject.transform.position - fishShadow.transform.position);
+
+            Vector3 direction = new Vector3 (-1, 0, 0);
+            fishShadow.transform.rotation = Quaternion.FromToRotation(direction, diff);
+            //Vector3.up
         }
         else
         {

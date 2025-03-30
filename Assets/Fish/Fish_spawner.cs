@@ -6,6 +6,8 @@ public class Fish_spawner : MonoBehaviour
 {
     public GameObject fishShadow;
 
+    public player p1;
+
     int second = System.DateTime.Now.Second;
 
     int flag =0;
@@ -19,15 +21,18 @@ public class Fish_spawner : MonoBehaviour
     void Update()
     {
         second = System.DateTime.Now.Second;
-
-        FishSpawning();
+        if (p1.Ispoint == false)
+        {
+            FishSpawning();
+        }
+        
 
         // Debug.Log(second+"秒");
     }
 
     void FishSpawning()
     { 
-        if(second % 3 == 0 && flag == 0)
+        if(second % 2 == 0 && flag == 0)
         {
             // Debug.Log("スポーン");
 
@@ -37,7 +42,7 @@ public class Fish_spawner : MonoBehaviour
 
         }
 
-        if(second % 3 == 1 )
+        if(second % 2 == 1 )
         {
             flag = 0;
         }
